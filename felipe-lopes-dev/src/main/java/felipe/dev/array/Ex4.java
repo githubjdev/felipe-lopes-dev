@@ -1,0 +1,44 @@
+package felipe.dev.array;
+
+import java.util.Scanner;
+
+public class Ex4 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int[] valores = new int[5];
+
+		for (int i = 0; i < valores.length; i++) {
+
+			System.out.println("Digite o numero: " + (i + 1));
+			valores[i] = sc.nextInt();
+
+		}
+
+		int soma = 0;
+
+		for (int numero : valores) {
+			soma += numero;
+		}
+
+		System.out.println("Soma de tudo: " + soma);
+
+		int maior = valores[0]; // valor base
+		for (int numero : valores) {
+			if (numero > maior) {
+				maior = numero;
+			}
+		}
+
+		System.out.println("Numero Menor: " + maior);
+		
+		
+		double media = soma / valores.length;
+		
+		System.out.println("Média de valores: " + media);
+
+	}
+
+}
